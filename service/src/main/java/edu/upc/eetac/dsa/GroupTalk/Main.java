@@ -20,8 +20,8 @@ public class Main {
 
     public final static String getBaseURI() {
         if (baseURI == null) {
-            PropertyResourceBundle prb = (PropertyResourceBundle) ResourceBundle.getBundle("beeter");
-            baseURI = prb.getString("beeter.context");
+            PropertyResourceBundle prb = (PropertyResourceBundle) ResourceBundle.getBundle("GroupTalk");
+            baseURI = prb.getString("GroupTalk.context");
         }
         return baseURI;
     }
@@ -33,7 +33,7 @@ public class Main {
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
         // in edu.upc.eetac.dsa.GroupTalk package
-        final ResourceConfig rc = new ResourceConfig().packages("edu.upc.eetac.dsa.GroupTalk");
+        final ResourceConfig rc = new GroupTalkResourceConfig();
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
