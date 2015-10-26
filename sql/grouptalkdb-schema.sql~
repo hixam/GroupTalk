@@ -43,6 +43,8 @@ CREATE TABLE tema (
 	idgrupo BINARY(16) NOT NULL,
 	titulo VARCHAR(100) NOT NULL,
 	content VARCHAR(100) NOT NULL,
+	autor_tema BINARY (16) NOT NULL,
+	FOREIGN KEY (autor_tema) REFERENCES users (id) on delete cascade,
 	FOREIGN KEY (idgrupo) REFERENCES groups(id) on delete cascade,
 	PRIMARY KEY (id)
 );
@@ -51,7 +53,9 @@ CREATE TABLE respuesta (
 	id BINARY(16) NOT NULL,
 	idtema BINARY(16) NOT NULL,
 	content VARCHAR(100) NOT NULL,
-	FOREIGN KEY (idtema) REFERENCES tema(id),
+	autor_respuesta BINARY(16) NOT NULL,
+	FOREIGN KEY (autor_respuesta) REFERENCES users (id) on delete cascade,
+	FOREIGN KEY (idtema) REFERENCES tema(id) on delete cascade,
 	PRIMARY KEY (id)
 );
 
