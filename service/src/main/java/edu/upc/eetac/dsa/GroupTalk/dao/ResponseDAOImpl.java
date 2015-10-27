@@ -51,6 +51,7 @@ public class ResponseDAOImpl implements ResponseDAO {
         }
         return getRespuestaById(id);
     }
+    @Override
     public Response updateResponse(String id, String content) throws SQLException{
         Response response = null;
 
@@ -146,6 +147,7 @@ public class ResponseDAOImpl implements ResponseDAO {
         }
         return responseCollection;
     }
+    @Override
     public boolean deleteResponse (String id) throws SQLException{
         Connection connection = null;
         PreparedStatement stmt = null;

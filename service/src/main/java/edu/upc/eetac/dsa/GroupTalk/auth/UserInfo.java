@@ -10,8 +10,10 @@ import java.util.List;
 /**
  * Created by bernat on 16/10/15.
  */
-public class UserInfo implements Principal { //para autorizar una petición necesitaremos un modelo de datos en el que podamos obtener el identificador de un usuario
+public class UserInfo implements Principal { //para autorizar una petición necesitaremos un
+    // modelo de datos en el que podamos obtener el identificador de un usuario
     // y los roles que tiene asignado
+
     private String name;
     private List<Role> roles = new ArrayList<>();
 
