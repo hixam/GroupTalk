@@ -49,6 +49,7 @@ public class GroupDAOImpl implements GroupDAO {
         }
         return getGroupById(id);
     }
+
     @Override
     public Group getGroupById(String id) throws SQLException {
         // Modelo a devolver
@@ -86,6 +87,7 @@ public class GroupDAOImpl implements GroupDAO {
         // Devuelve el modelo
         return group;
     }
+
     @Override
     public GroupCollection getGroups() throws SQLException {
         GroupCollection groupCollection = new GroupCollection();
@@ -114,6 +116,7 @@ public class GroupDAOImpl implements GroupDAO {
         }
         return groupCollection;
     }
+
     @Override
     public boolean dejarGrupo(String userid, String groupid) throws SQLException {
         Connection connection = null;
@@ -123,7 +126,7 @@ public class GroupDAOImpl implements GroupDAO {
 
             stmt = connection.prepareStatement(GroupDAOQuery.LEAVE_GROUP);
             stmt.setString(1, userid);
-            stmt.setString(2,groupid);
+            stmt.setString(2, groupid);
 
             int rows = stmt.executeUpdate();
             return (rows == 1);
@@ -144,17 +147,20 @@ public class GroupDAOImpl implements GroupDAO {
 
             stmt = connection.prepareStatement(GroupDAOQuery.JOIN_GROUP);
             stmt.setString(1, userid);
-            stmt.setString(2,groupid);
+            stmt.setString(2, groupid);
 
-            int rows = stmt.executeUpdate();
-            return (rows == 1);
+           int rows= stmt.executeUpdate();
+            return (rows==1);
+
         } catch (SQLException e) {
             throw e;
         } finally {
             if (stmt != null) stmt.close();
             if (connection != null) connection.close();
         }
+
     }
+
     /*public Group getGroupbyname(String name) throws SQLException {
         Group group = null;
 
