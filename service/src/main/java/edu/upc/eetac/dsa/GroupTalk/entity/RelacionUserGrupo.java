@@ -13,8 +13,24 @@ import java.util.List;
 public class RelacionUserGrupo {
     @InjectLinks({})
     private List<Link> links;
-    private String idGrupo;
-    private String idUser;
+    private String groupid;
+    private String userid;
+
+    public String getGroupid() {
+        return groupid;
+    }
+
+    public void setGroupid(String groupid) {
+        this.groupid = groupid;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
 
     public List<Link> getLinks() {
         return links;
@@ -24,19 +40,4 @@ public class RelacionUserGrupo {
         this.links = links;
     }
 
-    public String getIdGrupo() {
-        return idGrupo;
-    }
-
-    public void setIdGrupo(String idGrupo) {
-        this.idGrupo = idGrupo;
-    }
-
-    public String getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(String idUser) {
-        this.idUser = idUser;
-    }
 }

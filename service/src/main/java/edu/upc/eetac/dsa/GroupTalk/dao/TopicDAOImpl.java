@@ -1,5 +1,6 @@
 package edu.upc.eetac.dsa.GroupTalk.dao;
 
+import edu.upc.eetac.dsa.GroupTalk.entity.RelacionUserGrupo;
 import edu.upc.eetac.dsa.GroupTalk.entity.Topic;
 import edu.upc.eetac.dsa.GroupTalk.entity.TopicCollection;
 
@@ -136,9 +137,9 @@ public class TopicDAOImpl implements TopicDAO {
             connection = Database.getConnection();
 
             stmt = connection.prepareStatement(TopicDAOQuery.UPDATE_TOPIC);
-            stmt.setString(1, id);
-            stmt.setString(2, titulo);
-            stmt.setString(3, content);
+            stmt.setString(1, titulo);
+            stmt.setString(2, content);
+            stmt.setString(3, id);
 
             int rows = stmt.executeUpdate();
             if (rows == 1)
@@ -173,6 +174,34 @@ public class TopicDAOImpl implements TopicDAO {
             if (connection != null)
                 connection.close();
         }
+    }
+
+
+    @Override
+    public RelacionUserGrupo getRelacion(String userid, String groupid) throws SQLException {
+
+        RelacionUserGrupo relacionUserGrupo = null;
+        Connection connection = null;
+        PreparedStatement stmt = null;
+        try {
+            connection = Database.getConnection();
+
+            stmt = connection.prepareStatement(TopicDAOQuery.GET_RELACION);
+            stmt.setString(1, userid);
+            stmt.setString(2, groupid);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                relacionUserGrupo = new RelacionUserGrupo();
+                relacionUserGrupo.setUserid(rs.getString("userid"));
+                relacionUserGrupo.setGroupid(rs.getString("groupid"));
+            }
+        } catch (SQLException e){
+            throw e;
+        } finally {
+            if (stmt != null) stmt.close();
+            if (connection != null) connection.close();
+        }
+        return  relacionUserGrupo;
     }
 
 }

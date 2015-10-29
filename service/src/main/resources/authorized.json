@@ -12,5 +12,9 @@
   {
     "path": "groups",
     "methods":["GET"]
+  },
+  {
+    "path": "login",
+    "methods": ["POST"]
   }
 ]

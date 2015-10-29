@@ -24,6 +24,8 @@ public class GroupResource {
     private SecurityContext securityContext;
     @POST
 
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(GroupTalkMediaType.GROUPTALK_GROUP)
     public Response registerGroup(@FormParam("nombre") String nombre, @Context UriInfo uriInfo) throws URISyntaxException {
         if(nombre==null)
             throw new BadRequestException("all parameters are mandatory");
