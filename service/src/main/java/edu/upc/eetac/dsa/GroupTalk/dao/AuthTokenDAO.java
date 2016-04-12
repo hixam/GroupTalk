@@ -6,7 +6,7 @@ import edu.upc.eetac.dsa.GroupTalk.entity.AuthToken;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public interface AuthTokenDAO { //Interfaz para los tokens
     public UserInfo getUserByAuthToken(String token) throws SQLException; //Obtiene el usuario que tiene el token

@@ -4,7 +4,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public class GroupTalkResourceConfig extends ResourceConfig {
     public GroupTalkResourceConfig() {

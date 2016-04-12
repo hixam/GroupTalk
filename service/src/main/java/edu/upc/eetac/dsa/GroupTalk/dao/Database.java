@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
     public class Database { //patrón de diseño que garantiza que sólo hay una única instancia de una determinada clase SINGLETON
     private static Database instance = null;

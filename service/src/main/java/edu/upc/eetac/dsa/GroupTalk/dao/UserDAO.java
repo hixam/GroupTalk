@@ -5,7 +5,7 @@ import edu.upc.eetac.dsa.GroupTalk.entity.User;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public interface UserDAO {
     public User createUser(String loginid, String password) throws SQLException, UserAlreadyExistsException; //crea en la base de datos un usuario con rol registered

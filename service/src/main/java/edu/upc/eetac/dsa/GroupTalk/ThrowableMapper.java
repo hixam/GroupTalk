@@ -8,7 +8,7 @@ import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 /**
- * Created by bernat on 27/10/15.
+ * Created by hixam on 27/10/15.
  */
 @Provider
 public class ThrowableMapper implements ExceptionMapper<Throwable> {

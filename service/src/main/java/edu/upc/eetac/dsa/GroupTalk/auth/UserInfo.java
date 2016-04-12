@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public class UserInfo implements Principal { //para autorizar una petición necesitaremos un
     // modelo de datos en el que podamos obtener el identificador de un usuario

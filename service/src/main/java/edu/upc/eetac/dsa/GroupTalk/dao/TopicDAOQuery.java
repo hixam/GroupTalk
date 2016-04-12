@@ -4,7 +4,7 @@ package edu.upc.eetac.dsa.GroupTalk.dao;
 import edu.upc.eetac.dsa.GroupTalk.entity.Topic;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public interface TopicDAOQuery {
     public final static String  UUID = "select REPLACE(UUID(),'-','')";

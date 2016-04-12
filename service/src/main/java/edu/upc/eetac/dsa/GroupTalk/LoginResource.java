@@ -14,7 +14,7 @@ import javax.ws.rs.core.SecurityContext;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 28/10/15.
+ * Created by hixam on 28/10/15.
  */
 @Path("login")
 public class LoginResource { //Recurso raíz para poder loguearse y desloguearse

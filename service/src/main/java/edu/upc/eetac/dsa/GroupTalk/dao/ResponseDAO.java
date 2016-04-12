@@ -6,7 +6,7 @@ import edu.upc.eetac.dsa.GroupTalk.entity.ResponseCollection;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 25/10/15.
+ * Created by hixam on 25/10/15.
  */
 public interface ResponseDAO {
 

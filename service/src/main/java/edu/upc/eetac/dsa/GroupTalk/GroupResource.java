@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 import java.sql.SQLException;
 
 /**
- * Created by bernat on 27/10/15.
+ * Created by hixam on 27/10/15.
  */
 @Path("groups")
 public class GroupResource {

@@ -18,7 +18,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Created by bernat on 26/10/15.
+ * Created by hixam on 26/10/15.
  */
 @Provider
 @Priority(Priorities.AUTHENTICATION)

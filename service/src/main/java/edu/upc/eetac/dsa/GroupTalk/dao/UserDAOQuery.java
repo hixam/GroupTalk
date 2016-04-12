@@ -1,7 +1,7 @@
 package edu.upc.eetac.dsa.GroupTalk.dao;
 
 /**
- * Created by bernat on 16/10/15.
+ * Created by hixam on 16/10/15.
  */
 public class UserDAOQuery {
     public final static String UUID = "select REPLACE(UUID(),'-','')";//genera el identificador de usuario
